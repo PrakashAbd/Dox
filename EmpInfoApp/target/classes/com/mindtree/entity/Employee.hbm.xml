@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2018 4:51:48 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.mindtree.entity.Employee" table="EMPLOYEE">
+        <id name="empNum" type="int">
+            <column name="EMPNUM" />
+            <generator class="increment" />
+        </id>
+        <property name="empName" type="java.lang.String">
+            <column name="EMPNAME" />
+        </property>
+        <property name="dob" type="java.util.Date">
+            <column name="DOB" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+        <property name="salary" type="double">
+            <column name="SALARY" />
+        </property>
+        <many-to-one name="department" class="com.mindtree.entity.Department" fetch="join">
+            <column name="DEPNUM" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
