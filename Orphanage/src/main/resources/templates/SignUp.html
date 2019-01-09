@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Page</title>
+	<style>
+		body{
+			color: white;
+			background-color: black;
+		}
+		form{
+				margin-top: 250px;
+                text-align: left;
+                width: 400px;
+                height: 100px;
+                padding-left: 38em; 
+            }
+		label{
+                float: left;
+                width: 150px;
+            }
+        #UserPage1{
+        	display : none;
+        }
+	</style>
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body style="background-color:midnightblue">
+	
+	
+            <fieldset>
+            	<legend>User Details Confirmation</legend>
+            <center>Choose a User Type
+                        <select name="userType" onchange="func1()">
+                            <option value="userType">User</option>   
+                            <option value="userType1">Orphanage</option>
+                        </select></center>
+            	<form action="/validate" id="UserPage">
+                	
+
+            	<label>UserName	:</label>  <input type = "text" name="username" required><br><br>
+            	<label>Password 	:</label>  <input type="text" name="password" required><br><br>
+            	<label>Email        :</label>  <input type="email" name="email" required><br><br>
+            	<label>Phone        :</label>  <input type="text" name="phoneNumber" required><br><br>
+            	<label>District     :</label>  <input type ="text" name="district" required><br><br>
+            	<label>Choose a User Type</label>
+                        <select name="userType">
+                            <option value="userType">User</option>   
+                            <option value="func1()">Orphanage</option>
+                        </select><br><br>
+            	<center><input type="submit" name="submit" value="SUBMIT" /></center>
+            	</form>
+            </fieldset>
+   
+ <form action="/validate" id="UserPage1">  
+            <fieldset>
+   	             <legend>Orphanage Details </legend>
+
+            	<label>OrphanageName	:</label>  <input type = "text" name="username" required><br><br>
+            	<label>Password 	:</label>  <input type="text" name="password" required><br><br>
+            	<label>Email        :</label>  <input type="email" name="email" required><br><br>
+            	<label>Phone        :</label>  <input type="text" name="phoneNumber" required><br><br>
+            	<label>District     :</label>  <input type ="text" name="district" required><br><br>
+            	<label>Choose a User Type</label>
+                        <select name="userType">
+                            <option value="userType">User</option>   
+                            <option value="func1()">Orphanage</option>
+                        </select><br><br>
+            	<center><input type="submit" name="submit" value="SUBMIT" /></center>
+            </fieldset>
+   </form>
+   <script>
+		function func1()
+		{
+			$("#UserPage1").show();
+		    $("#UserPage").hide();
+		}
+   </script>
+</body>
+</html>

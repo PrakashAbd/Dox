@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 11, 2018 7:57:58 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.example.entity.User" table="USER">
+        <id name="userId" type="int" access="field">
+            <column name="USERID" />
+            <generator class="increment" />
+        </id>
+        <property name="username" type="java.lang.String" access="field">
+            <column name="USERNAME" />
+        </property>
+        <property name="password" type="java.lang.String" access="field">
+            <column name="PASSWORD" />
+        </property>
+        <property name="email" type="java.lang.String" access="field">
+            <column name="EMAIL" />
+        </property>
+        <property name="phoneNumber" type="java.lang.String" access="field">
+            <column name="PHONENUMBER" />
+        </property>
+        <property name="district" type="java.lang.String" access="field">
+            <column name="DISTRICT" />
+        </property>
+    </class>
+</hibernate-mapping>
